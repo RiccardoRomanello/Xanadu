@@ -109,11 +109,12 @@ A lookahead value `l` is used to inspect the next `l` CNOTs:
 ## 🧩 Overall Process
 
 1. Select a mapping strategy to compute $\varphi$.
-2. Simulate routing for the first `k` CNOTs using $\varphi` to get an updated mapping $\varphi'`.
-3. Compare the number of swaps:
-   - If $\varphi'$ performs better, use it.
-   - Otherwise, stick with $\varphi`.
-4. Apply the final routing step to produce the transformed circuit with inserted SWAPs.
+2. Simulate routing for the first `k` CNOTs using $\varphi$ to get an updated mapping $\varphi_1$.
+3. Route again the first `k` CNOTs using $\varphi_1$ as mapping
+4. Compare the number of swaps:
+   - If $\varphi_1$ performs better, use it.
+   - Otherwise, stick with $\varphi$.
+5. Apply the final routing step to produce the transformed circuit with inserted SWAPs.
 
 ---
 
