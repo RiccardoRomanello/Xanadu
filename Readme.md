@@ -73,10 +73,10 @@ The most complex strategy.
 - For each free qubit $q$, computes the set of up to $d$ free qubits $q_1, ..., q_k$ that maximize:
   
   $$
-  \sum_{i = 1}^{k}{\#(q, q_i)}
+  \sum_{i = 1}^{k}{\delta(q, q_i)}
   $$
 
-  where $\#(q', q'')$ is the number of CNOTs between $q'$ and $q''$.
+  where $\delta(q', q'')$ is the number of CNOTs between $q'$ and $q''$.
 
 - This identifies the qubit that can **use** the connections of the selected node most effectively.
 - The top-k interacting qubits are recursively mapped to the neighbors of the chosen node.
